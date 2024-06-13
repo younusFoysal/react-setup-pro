@@ -1,11 +1,14 @@
 import React, {useEffect, useState} from 'react';
 import "./loader.css"
+import {Link, useLocation} from "react-router-dom";
 
 const Navbar = () => {
 
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const location = useLocation();
+    console.log(location.pathname)
 
     useEffect(() => {
         fetch('/links.json')
@@ -377,7 +380,22 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn" href="#button">Button</a>
+
+                {
+                    location.pathname==="/" ? <Link to="/server">
+                        <button className="btn btn-secondary text-white bg-cyan-900 border-0 hover:bg-orange-400 hover:text-black">
+                            Server
+                        </button>
+                    </Link>
+                        :
+                        <Link to="/">
+                            <button className="btn btn-secondary text-white bg-cyan-900 border-0 hover:bg-orange-400 hover:text-black">
+                                Client
+                            </button>
+                        </Link>
+
+
+                }
             </div>
         </nav>
     );
