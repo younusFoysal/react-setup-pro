@@ -11,6 +11,8 @@ const Home = () => {
     const [useIcons, setIcons] = useState(false)
     const [useToastify, setToastify] = useState(false)
     const [usePropTypes, setPropTypes] = useState(false)
+    const [useDeploy, setDeploy] = useState(false)
+
 
     function copyToClipboard(id, btnId) {
         const textToCopy = document.getElementById(id).innerText
@@ -70,7 +72,8 @@ const Home = () => {
                                    className="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-slate-700/50 border-0 peer-checked:border-2 shadow-xl border-gray-200 rounded-lg cursor-pointer  peer-checked:border-blue-600 hover:text-gray-600  peer-checked:text-gray-600 hover:bg-gray-50 ">
                                 <div className="flex flex-col gap-2 items-center justify-center w-full">
                                     <img className='w-7 h-7' src="react-router-svgrepo-com.svg" alt="router"/>
-                                    <div className="w-full text-lg font-semibold font-mono text-center">React-router</div>
+                                    <div className="w-full text-lg font-semibold font-mono text-center">React-router
+                                    </div>
                                 </div>
                             </label>
                         </li>
@@ -143,12 +146,24 @@ const Home = () => {
                                 </div>
                             </label>
                         </li>
+                        <li>
+                            <input onClick={() => setDeploy(!useDeploy)} type="checkbox" id="deploy"
+                                   value="" className="hidden peer"></input>
+                            <label htmlFor="deploy"
+                                   className="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-slate-700/50 border-0 peer-checked:border-2 shadow-xl border-gray-200 rounded-lg cursor-pointer  peer-checked:border-blue-600 hover:text-gray-600  peer-checked:text-gray-600 hover:bg-gray-50 ">
+                                <div className="flex flex-col gap-2 items-center justify-center w-full">
+                                    <img width="28" height="28" src="deploy.png" alt="prop-types"/>
+                                    <div className="w-full text-lg font-semibold font-mono text-center">Deploy</div>
+                                </div>
+                            </label>
+                        </li>
                     </ul>
                 </form>
             </div>
             <div className='my-10'>
                 <h1 className='font-bold text-2xl text-center w-full font-mono text-orange-400'>NPM Packages</h1>
-                <p className='font-mono font-medium mb-10 text-center'>Elevate Your React Projects with Essential NPM Packages</p>
+                <p className='font-mono font-medium mb-10 text-center'>Elevate Your React Projects with Essential NPM
+                    Packages</p>
                 <div className="lg:mx-[300px] border border-zinc-700  bg-slate-800 rounded-xl shadow-lg">
 
                     <div className="relative flex text-slate-400 text-xs leading-6 bg-slate-800 rounded-xl shadow-lg ">
@@ -797,6 +812,90 @@ MyComponent.propTypes = {
   optionalElement: PropTypes.element,
   optionalNode: PropTypes.node
 };`}</code>
+                  </pre>
+                </span>
+              </code>
+            </pre>
+                    </div>
+                </>
+            }
+
+        {/*  Deploy  */}
+            {
+                useDeploy && <>
+                    <div className='my-10'>
+                        <h1 className='font-bold text-2xl text-center w-full font-mono text-orange-400'>
+                            Deploy In Firebase
+                        </h1>
+                        <p className='font-mono font-medium text-center'>Host Your React App in Firebase</p>
+                    </div>
+                    <div
+                        data-code-block=""
+                        data-filename="deploy"
+                        data-line-numbers="true"
+                        data-lang="jsx"
+                        className="text-left bg-slate-800 rounded-xl lg:mx-[300px]  text-zinc-300"
+                    >
+
+                        <div className="relative flex text-slate-400 text-xs leading-6 w-full">
+                            <div
+                                className="mt-2 flex-none text-sky-300 border-t border-b border-t-transparent border-b-sky-300 px-4 py-1 flex items-center">
+                                MyComponent.jsx
+                            </div>
+                            <div className="flex-auto flex pt-2 rounded-tr-xl overflow-hidden">
+                                <div
+                                    className="flex-auto -mr-px bg-slate-700/50 border border-slate-500/30 rounded-tl"></div>
+                            </div>
+                            <div className="absolute top-2 right-0 h-8 flex items-center pr-4">
+                                <div className="relative flex -mr-2">
+                                    <button
+                                        type="button"
+                                        id="deploy-btn"
+                                        data-tip="copied"
+                                        className="text-slate-500 hover:text-slate-400"
+                                        onClick={() => copyToClipboard('deploy', 'deploy-btn')}
+                                    >
+                                        <svg
+                                            fill="none"
+                                            stroke="currentColor"
+                                            strokeWidth="1.5"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            aria-hidden="true"
+                                            className="w-8 h-8"
+                                        >
+                                            <path
+                                                d="M13 10.75h-1.25a2 2 0 0 0-2 2v8.5a2 2 0 0 0 2 2h8.5a2 2 0 0 0 2-2v-8.5a2 2 0 0 0-2-2H19"></path>
+                                            <path
+                                                d="M18 12.25h-4a1 1 0 0 1-1-1v-1.5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1.5a1 1 0 0 1-1 1ZM13.75 16.25h4.5M13.75 19.25h4.5"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <pre
+                            data-filename="deploy"
+                            data-line-numbers="true"
+                            data-lang="jsx"
+                            className="p-5"
+                        >
+              <code className='break-words text-balance' id="MyComponent-jsx">
+                <span>
+                  <pre className='whitespace-pre-wrap'>
+                    <code>{`npm install -g firebase-tools
+firebase login
+
+firebase init
+y
+Hosting: configure files .... Move with UP or Down & select with *
+Existing project  → select project
+dist
+y
+n
+
+npm run build
+
+firebase deploy`}</code>
                   </pre>
                 </span>
               </code>
