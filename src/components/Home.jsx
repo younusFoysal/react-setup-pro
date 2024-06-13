@@ -67,7 +67,7 @@ const Home = () => {
                             <input onClick={() => setRouter(!useRouter)} type="checkbox" id="router-option" value=""
                                    className="hidden peer" required=""></input>
                             <label htmlFor="router-option"
-                                   className="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-slate-700/50 border-0 shadow-xl border-gray-200 rounded-lg cursor-pointer  peer-checked:border-blue-600 hover:text-gray-600  peer-checked:text-gray-600 hover:bg-gray-50 ">
+                                   className="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-slate-700/50 border-0 peer-checked:border-2 shadow-xl border-gray-200 rounded-lg cursor-pointer  peer-checked:border-blue-600 hover:text-gray-600  peer-checked:text-gray-600 hover:bg-gray-50 ">
                                 <div className="flex flex-col gap-2 items-center justify-center w-full">
                                     <img className='w-7 h-7' src="react-router-svgrepo-com.svg" alt="router"/>
                                     <div className="w-full text-lg font-semibold font-mono text-center">React-router</div>
@@ -78,7 +78,7 @@ const Home = () => {
                             <input onClick={() => setTailwind(!useTailwind)} type="checkbox" id="tailwind-option"
                                    value="" className="hidden peer" required=""></input>
                             <label htmlFor="tailwind-option"
-                                   className="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-slate-700/50 border-0 shadow-xl border-gray-200 rounded-lg cursor-pointer  peer-checked:border-blue-600 hover:text-gray-600 peer-checked:text-gray-600 hover:bg-gray-50 ">
+                                   className="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-slate-700/50 border-0 peer-checked:border-2 shadow-xl border-gray-200 rounded-lg cursor-pointer  peer-checked:border-blue-600 hover:text-gray-600 peer-checked:text-gray-600 hover:bg-gray-50 ">
                                 <div className="flex flex-col gap-2 items-center justify-center w-full">
                                     <img className='w-7 h-7' src="tailwind-css-icon.svg" alt="tailwindcss"/>
                                     <div className="w-full text-lg font-semibold font-mono text-center">Tailwind</div>
@@ -89,7 +89,7 @@ const Home = () => {
                             <input onClick={() => setDaisy(!useDaisy)} type="checkbox" id="react-option" value=""
                                    className="hidden peer" required=""></input>
                             <label htmlFor="react-option"
-                                   className="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-slate-700/50 border-0 shadow-xl border-gray-200 rounded-lg cursor-pointer  peer-checked:border-blue-600 hover:text-gray-600  peer-checked:text-gray-600 hover:bg-gray-50 ">
+                                   className="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-slate-700/50 border-0 peer-checked:border-2 shadow-xl border-gray-200 rounded-lg cursor-pointer  peer-checked:border-blue-600 hover:text-gray-600  peer-checked:text-gray-600 hover:bg-gray-50 ">
                                 <div className="flex flex-col gap-2 items-center justify-center w-full">
                                     <img className='w-7 h-7' src="daisyui.png" alt=""/>
                                     <div className="w-full text-lg font-semibold font-mono text-center">DaisyUi</div>
@@ -100,7 +100,7 @@ const Home = () => {
                             <input onClick={() => setFirebase(!useFirebase)} type="checkbox" id="flowbite-option"
                                    value="" className="hidden peer"></input>
                             <label htmlFor="flowbite-option"
-                                   className="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-slate-700/50 border-0 shadow-xl border-gray-200 rounded-lg cursor-pointer  peer-checked:border-blue-600 hover:text-gray-600  peer-checked:text-gray-600 hover:bg-gray-50 ">
+                                   className="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-slate-700/50 border-0 peer-checked:border-2 shadow-xl border-gray-200 rounded-lg cursor-pointer  peer-checked:border-blue-600 hover:text-gray-600  peer-checked:text-gray-600 hover:bg-gray-50 ">
                                 <div className="flex flex-col gap-2 items-center justify-center w-full">
                                     <img className='h-7 w-7'
                                          src="https://firebase.google.com/static/downloads/brand-guidelines/SVG/logo-logomark.svg"
@@ -113,7 +113,7 @@ const Home = () => {
                             <input onClick={() => setToastify(!useToastify)} type="checkbox" id="angular-option"
                                    value="" className="hidden peer"></input>
                             <label htmlFor="angular-option"
-                                   className="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-slate-700/50 border-0 shadow-xl border-gray-200 rounded-lg cursor-pointer  peer-checked:border-blue-600 hover:text-gray-600  peer-checked:text-gray-600 hover:bg-gray-50 ">
+                                   className="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-slate-700/50 border-0 peer-checked:border-2 shadow-xl border-gray-200 rounded-lg cursor-pointer  peer-checked:border-blue-600 hover:text-gray-600  peer-checked:text-gray-600 hover:bg-gray-50 ">
                                 <div className="flex flex-col gap-2 items-center justify-center w-full">
                                     <img width="28" height="28" src="https://img.icons8.com/arcade/64/toast.png"
                                          alt="toast"/>
@@ -125,7 +125,7 @@ const Home = () => {
                             <input onClick={() => setIcons(!useIcons)} type="checkbox" id="reactIcons-option" value=""
                                    className="hidden peer"></input>
                             <label htmlFor="reactIcons-option"
-                                   className="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-slate-700/50 border-0 shadow-xl border-gray-200 rounded-lg cursor-pointer  peer-checked:border-blue-600 hover:text-gray-600  peer-checked:text-gray-600 hover:bg-gray-50 ">
+                                   className="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-slate-700/50 border-0 peer-checked:border-2 shadow-xl border-gray-200 rounded-lg cursor-pointer  peer-checked:border-blue-600 hover:text-gray-600  peer-checked:text-gray-600 hover:bg-gray-50 ">
                                 <div className="flex flex-col gap-2 items-center justify-center w-full">
                                     <img width="28" height="28" src="react-svgrepo-com.svg" alt="react-icons"/>
                                     <div className="w-full text-lg font-semibold font-mono text-center">React-icon</div>
@@ -136,7 +136,7 @@ const Home = () => {
                             <input onClick={() => setPropTypes(!usePropTypes)} type="checkbox" id="propTypes-option"
                                    value="" className="hidden peer"></input>
                             <label htmlFor="propTypes-option"
-                                   className="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-slate-700/50 border-0 shadow-xl border-gray-200 rounded-lg cursor-pointer  peer-checked:border-blue-600 hover:text-gray-600  peer-checked:text-gray-600 hover:bg-gray-50 ">
+                                   className="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-slate-700/50 border-0 peer-checked:border-2 shadow-xl border-gray-200 rounded-lg cursor-pointer  peer-checked:border-blue-600 hover:text-gray-600  peer-checked:text-gray-600 hover:bg-gray-50 ">
                                 <div className="flex flex-col gap-2 items-center justify-center w-full">
                                     <img width="28" height="28" src="react-svgrepo-com.svg" alt="prop-types"/>
                                     <div className="w-full text-lg font-semibold font-mono text-center">Prop-types</div>

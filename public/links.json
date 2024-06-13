@@ -1,7 +1,67 @@
 {
+  "AllAI": [
+    {
+      "title": "AI Detector",
+      "url": "https://sapling.ai/ai-content-detector"
+    },
+    {
+      "title": "ZeroGPT",
+      "url": "https://www.zerogpt.com/"
+    },
+    {
+      "title": "Bard",
+      "url": "https://bard.google.com/"
+    },
+    {
+      "title": "Chat gpt",
+      "url": "https://chat.openai.com/"
+    },
+    {
+      "title": "Bing Chat",
+      "url": "https://www.bing.com/search?q=Bing+AI&showconv=1&FORM=hpcodx"
+    },
+    {
+      "title": "Pebblely",
+      "url": "https://app.pebblely.com/"
+    },
+    {
+      "title": "Canvas",
+      "url": "https://magicstudio.com/canvas/"
+    },
+    {
+      "title": "Rytr AI Writer",
+      "url": "https://app.rytr.me/create/file/65119d8596cd6156f3b67927"
+    },
+    {
+      "title": "Dashboard",
+      "url": "https://app.steve.ai/dashboard"
+    },
+    {
+      "title": "Text to animation",
+      "url": "https://theresanaiforthat.com/s/text%20to%20animation/"
+    },
+    {
+      "title": "Leonardo.Ai",
+      "url": "https://app.leonardo.ai/ai-generations"
+    },
+    {
+      "title": "Animaker",
+      "url": "https://app.animaker.com/editproject/TpgLr4COgExeyLo0"
+    }
+  ],
+  "Dev": [
+    {
+      "title": "Figma",
+      "url": "https://www.figma.com/files/recents-and-sharing?fuid=1325180709032144162"
+    },
+    {
+      "title": "Pixso",
+      "url": "https://pixso.net/?fbclid=IwAR2s_MV-dI96JAcy63aTT2i20iJjMPxljukjxtZcoA1HQsHeuyrOs7ofuHI"
+    }
+  ],
   "Documentations": [
     {
-      "title": "Start React",
+      "title": "React",
       "url": "https://react.dev/learn/start-a-new-react-project"
     },
     {
@@ -29,13 +89,314 @@
       "url": "https://momentjs.com/"
     },
     {
-      "title": "React Fast Marquee",
+      "title": "React Marquee",
       "url": "https://www.react-fast-marquee.com/documentation"
     },
     {
-      "title": "React Helmet",
+      "title": "React Helmet Async",
       "url": "https://www.npmjs.com/package/react-helmet-async"
+    },
+    {
+      "title": "Express",
+      "url": "https://expressjs.com/en/starter/installing.html"
+    },
+    {
+      "title": "npmJS",
+      "url": "https://www.npmjs.com/"
+    },
+    {
+      "title": "Nodemon",
+      "url": "https://www.npmjs.com/package/nodemon"
+    },
+    {
+      "title": "Mongo DB",
+      "url": "https://www.mongodb.com/docs/drivers/node/current/usage-examples/insertOne/"
+    },
+    {
+      "title": "Dotenv",
+      "url": "https://www.npmjs.com/package/dotenv"
+    },
+    {
+      "title": "Vercel CLI",
+      "url": "https://vercel.com/docs/cli"
+    },
+    {
+      "title": "TanStack Query",
+      "url": "https://tanstack.com/query/latest/docs/framework/react/installation"
+    },
+    {
+      "title": "Auth0",
+      "url": "https://github.com/auth0"
+    },
+    {
+      "title": "JsonWebToken",
+      "url": "https://github.com/auth0/node-jsonwebtoken"
+    },
+    {
+      "title": "Axios",
+      "url": "https://axios-http.com/docs/intro"
+    },
+    {
+      "title": "Hands on React",
+      "url": "https://handsonreact.com/"
+    },
+    {
+      "title": "React Simple Captcha",
+      "url": "https://www.npmjs.com/package/react-simple-captcha"
+    },
+    {
+      "title": "Formik",
+      "url": "https://formik.org/docs/overview"
+    },
+    {
+      "title": "Socket.IO",
+      "url": "https://socket.io/"
+    },
+    {
+      "title": "Stripe.js",
+      "url": "https://github.com/stripe/react-stripe-js"
+    },
+    {
+      "title": "Stripe Documentation",
+      "url": "https://docs.stripe.com/payments/quickstart"
+    }
+  ],
+  "Deploy": [
+    {
+      "title": "Netlify",
+      "url": "https://app.netlify.com/teams/younusfoysal/overview"
+    },
+    {
+      "title": "Vercel",
+      "url": "https://vercel.com/younusfoysals-projects"
+    },
+    {
+      "title": "Surge",
+      "url": "https://surge.sh/"
+    },
+    {
+      "title": "ImgBB",
+      "url": "https://imgbb.com/"
+    },
+    {
+      "title": "MongoDB Cloud",
+      "url": "https://cloud.mongodb.com/v2/662cb7bcf6a08c22330de851#/clusters"
+    },
+    {
+      "title": "Firebase console",
+      "url": "https://console.firebase.google.com/"
+    },
+    {
+      "title": "Recharts",
+      "url": "https://recharts.org/en-US/"
+    }
+  ],
+  "CSS": [
+    {
+      "title": "Tailwind CSS",
+      "url": "https://tailwindcss.com/docs/installation"
+    },
+    {
+      "title": "daisyUI",
+      "url": "https://daisyui.com/docs/install/"
+    },
+    {
+      "title": "React Hot Toast",
+      "url": "https://react-hot-toast.com/docs"
+    },
+    {
+      "title": "Recharts",
+      "url": "https://recharts.org/en-US/guide/installation"
+    },
+    {
+      "title": "Awesome React Components",
+      "url": "https://github.com/brillout/awesome-react-components"
+    },
+    {
+      "title": "Vanilla CSS",
+      "url": "https://vanillaframework.io/docs/patterns/card"
+    },
+    {
+      "title": "Bootstrap v5.2",
+      "url": "https://getbootstrap.com/docs/5.2/getting-started/introduction/"
+    },
+    {
+      "title": "CSS Grid Generator",
+      "url": "https://cssgrid-generator.netlify.app/"
+    },
+    {
+      "title": "CSS Tutorial",
+      "url": "https://www.w3schools.com/css/default.asp"
+    },
+    {
+      "title": "CSS clip-path maker",
+      "url": "https://bennettfeely.com/clippy/"
+    },
+    {
+      "title": "RGBA to Hex",
+      "url": "https://rgbacolorpicker.com/rgba-to-hex"
+    },
+    {
+      "title": "Center a Div",
+      "url": "https://www.joshwcomeau.com/css/center-a-div/"
+    },
+    {
+      "title": "Components to Code",
+      "url": "https://www.figma.com/community/plugin/1077172952654000760/autohtml-components-to-code"
+    },
+    {
+      "title": "Figma to Code",
+      "url": "https://www.figma.com/community/plugin/747985167520967365/builder-io-ai-powered-figma-to-code-react-vue-tailwind-more"
+    },
+    {
+      "title": "SwiperJS",
+      "url": "https://swiperjs.com/get-started#install-from-npm"
+    },
+    {
+      "title": "Animate.css",
+      "url": "https://animate.style/"
+    },
+    {
+      "title": "AOS",
+      "url": "https://www.npmjs.com/package/aos"
+    },
+    {
+      "title": "React Hook Form",
+      "url": "https://react-hook-form.com/"
+    },
+    {
+      "title": "Tailwindflex Components",
+      "url": "https://tailwindflex.com/components"
+    },
+    {
+      "title": "SweetAlert2",
+      "url": "https://sweetalert2.github.io/"
+    },
+    {
+      "title": "Mamba UI",
+      "url": "https://mambaui.com/"
+    },
+    {
+      "title": "Meraki UI",
+      "url": "https://merakiui.com/"
+    },
+    {
+      "title": "Flowbite UI",
+      "url": "https://flowbite-react.com/?fbclid=IwZXh0bgNhZW0CMTAAAR2EYwirtCsemvedvDyMLSQrAYNPRMt730OpAD5SZWaalbt3McilbamUAX0_aem_AdQPOHUVbaLdqk6J2GkAvj_sf6pu8PvzoQ4D8qnz8khs4ABL1RoYbKkSuhWhYUlh0mrYyQzTDAtnxADlYOoysqPb"
+    },
+    {
+      "title": "CSS Gradient Generator",
+      "url": "https://cssgradient.io/"
+    },
+    {
+      "title": "135+ CSS Spinners",
+      "url": "https://freefrontend.com/css-spinners/"
+    },
+    {
+      "title": "CSS loaders and Spinners",
+      "url": "https://cssloaders.github.io/"
+    },
+    {
+      "title": "Classic CSS Loaders",
+      "url": "https://css-loaders.com/classic/"
+    },
+    {
+      "title": "React Toastify",
+      "url": "https://www.npmjs.com/package/react-toastify"
+    },
+    {
+      "title": "React Hot Toast",
+      "url": "https://react-hot-toast.com/"
+    },
+    {
+      "title": "ComponentLand Components",
+      "url": "https://componentland.com/components/all/hero"
+    },
+    {
+      "title": "HTML Formatter",
+      "url": "https://formatter.org/html-formatter"
+    },
+    {
+      "title": "React Bootstrap",
+      "url": "https://react-bootstrap.netlify.app/docs/getting-started/introduction/"
+    }
+  ],
+  "Icons": [
+    {
+      "title": "React Icons",
+      "url": "https://react-icons.github.io/react-icons/"
+    },
+    {
+      "title": "Hero Icons",
+      "url": "https://heroicons.com/"
+    },
+    {
+      "title": "Font Awesome",
+      "url": "https://fontawesome.com/search"
+    },
+    {
+      "title": "Ion icons",
+      "url": "https://ionic.io/ionicons"
+    },
+    {
+      "title": "Icons8",
+      "url": "https://icons8.com/"
+    }
+  ],
+  "APIs": [
+    {
+      "title": "Swagger APIs",
+      "url": "https://swagger.io/"
+    },
+    {
+      "title": "Public Apis",
+      "url": "https://github.com/public-apis/public-apis"
+    },
+    {
+      "title": "REST Countries",
+      "url": "https://restcountries.com/"
+    },
+    {
+      "title": "JSON Placeholder",
+      "url": "https://jsonplaceholder.typicode.com/"
+    },
+    {
+      "title": "Broken Phone",
+      "url": "https://github.com/ProgrammingHero1/broken-phone"
+    },
+    {
+      "title": "Meal API",
+      "url": "https://www.themealdb.com/api.php"
+    },
+    {
+      "title": "ImgBB API",
+      "url": "https://api.imgbb.com/"
+    }
+  ],
+  "Others": [
+    {
+      "title": "Diagram",
+      "url": "https://app.diagrams.net/"
+    },
+    {
+      "title": "HTTP codes",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status"
+    },
+    {
+      "title": "dev Challenges",
+      "url": "https://devchallenges.io/dashboard"
+    },
+    {
+      "title": "HTML5 Tags",
+      "url": "https://www.tutorialrepublic.com/html-reference/html5-tags.php"
+    },
+    {
+      "title": "JavaScript",
+      "url": "https://www.w3schools.com/js/default.asp"
+    },
+    {
+      "title": "HTML",
+      "url": "https://www.w3schools.com/html/default.asp"
     }
   ]
-
 }

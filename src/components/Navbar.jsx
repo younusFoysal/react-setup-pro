@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import "./loader.css"
 
 const Navbar = () => {
 
@@ -25,7 +26,7 @@ const Navbar = () => {
     }, []);
 
     if (loading) {
-        return <div>Loading...</div>;
+        return <div className="loader mt-8">Nav Loading...</div>;
     }
 
     if (error) {
@@ -46,42 +47,16 @@ const Navbar = () => {
                     </button>
                     <ul tabIndex={0}
                         className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                        <li><a href="#item1">Item 1</a></li>
+
+
                         <li>
                             <details>
                                 <summary>All AI</summary>
                                 <ul className="p-2">
-                                    <li><a className="w-60" href="https://sapling.ai/ai-content-detector"
-                                           target="_blank"
-                                           rel="noopener noreferrer">AI Content Detector</a></li>
-                                    <li><a href="https://www.zerogpt.com/" target="_blank"
-                                           rel="noopener noreferrer">ZeroGPT</a></li>
-                                    <li><a href="https://bard.google.com/" target="_blank"
-                                           rel="noopener noreferrer">Bard</a></li>
-                                    <li><a href="https://chat.openai.com/" target="_blank" rel="noopener noreferrer">Chat
-                                        GPT</a></li>
-                                    <li><a href="https://www.bing.com/search?q=Bing+AI&showconv=1&FORM=hpcodx"
-                                           target="_blank" rel="noopener noreferrer">Bing Chat</a></li>
-                                    <li><a href="https://app.pebblely.com/" target="_blank"
-                                           rel="noopener noreferrer">Pebblely</a></li>
-                                    <li><a href="https://magicstudio.com/canvas/" target="_blank"
-                                           rel="noopener noreferrer">Canvas</a></li>
-                                    <li><a href="https://app.rytr.me/create/file/65119d8596cd6156f3b67927"
-                                           target="_blank"
-                                           rel="noopener noreferrer">Rytr</a></li>
-                                    <li><a href="https://app.steve.ai/dashboard" target="_blank"
-                                           rel="noopener noreferrer">Steve
-                                        AI</a></li>
-                                </ul>
-                            </details>
-                        </li>
-                        <li>
-                            <details>
-                                <summary>Documentations</summary>
-                                <ul className="p-2">
                                     {
-                                        data.Documentations.map(link => <li key={link.url}>
+                                        data.AllAI.map(link => <li key={link.url}>
                                             <a
+                                                className="w-48"
                                                 href={link.url}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
@@ -93,46 +68,161 @@ const Navbar = () => {
                                 </ul>
                             </details>
                         </li>
-                        <li><a href="#item3">Item 3</a></li>
+                        <li>
+                            <details>
+                                <summary>Dev</summary>
+                                <ul className="p-2">
+                                    {
+                                        data.Dev.map(link => <li key={link.url}>
+                                            <a
+                                                className="w-48"
+                                                href={link.url}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                            >
+                                                {link.title}
+                                            </a>
+                                        </li>)
+                                    }
+                                </ul>
+                            </details>
+                        </li>
+                        <li>
+                            <details>
+                                <summary>Documentations</summary>
+                                <ul className="p-2">
+                                    {
+                                        data.Documentations.map(link => <li key={link.url}>
+                                            <a
+                                                className="w-48"
+                                                href={link.url}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                            >
+                                                {link.title}
+                                            </a>
+                                        </li>)
+                                    }
+                                </ul>
+                            </details>
+                        </li>
+                        <li>
+                            <details>
+                                <summary>Deploy</summary>
+                                <ul className="p-2">
+                                    {
+                                        data.Deploy.map(link => <li key={link.url}>
+                                            <a
+                                                className="w-48"
+                                                href={link.url}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                            >
+                                                {link.title}
+                                            </a>
+                                        </li>)
+                                    }
+                                </ul>
+                            </details>
+                        </li>
+
+                        <li>
+                            <details>
+                                <summary>CSS</summary>
+                                <ul className="p-2">
+                                    {
+                                        data.CSS.map(link => <li key={link.url}>
+                                            <a
+                                                className="w-48"
+                                                href={link.url}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                            >
+                                                {link.title}
+                                            </a>
+                                        </li>)
+                                    }
+                                </ul>
+                            </details>
+                        </li>
+
+                        <li>
+                            <details>
+                                <summary>Icons</summary>
+                                <ul className="p-2">
+                                    {
+                                        data.Icons.map(link => <li key={link.url}>
+                                            <a
+                                                className="w-48"
+                                                href={link.url}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                            >
+                                                {link.title}
+                                            </a>
+                                        </li>)
+                                    }
+                                </ul>
+                            </details>
+                        </li>
+
+                        <li>
+                            <details>
+                                <summary>APIs</summary>
+                                <ul className="p-2">
+                                    {
+                                        data.APIs.map(link => <li key={link.url}>
+                                            <a
+                                                className="w-48"
+                                                href={link.url}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                            >
+                                                {link.title}
+                                            </a>
+                                        </li>)
+                                    }
+                                </ul>
+                            </details>
+                        </li>
+
+                        <li>
+                            <details>
+                                <summary>Others</summary>
+                                <ul className="p-2">
+                                    {
+                                        data.Others.map(link => <li key={link.url}>
+                                            <a
+                                                className="w-48"
+                                                href={link.url}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                            >
+                                                {link.title}
+                                            </a>
+                                        </li>)
+                                    }
+                                </ul>
+                            </details>
+                        </li>
+
+
                     </ul>
                 </div>
                 <a className="btn btn-ghost text-xl" href="/">React Setup Pro</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                    <li><a href="#item1">Item 1</a></li>
+
+
                     <li>
                         <details>
                             <summary>All AI</summary>
                             <ul className="p-2">
-                                <li><a className="w-60" href="https://sapling.ai/ai-content-detector" target="_blank"
-                                       rel="noopener noreferrer">AI Content Detector</a></li>
-                                <li><a href="https://www.zerogpt.com/" target="_blank"
-                                       rel="noopener noreferrer">ZeroGPT</a></li>
-                                <li><a href="https://bard.google.com/" target="_blank"
-                                       rel="noopener noreferrer">Bard</a></li>
-                                <li><a href="https://chat.openai.com/" target="_blank" rel="noopener noreferrer">Chat
-                                    GPT</a></li>
-                                <li><a href="https://www.bing.com/search?q=Bing+AI&showconv=1&FORM=hpcodx"
-                                       target="_blank" rel="noopener noreferrer">Bing Chat</a></li>
-                                <li><a href="https://app.pebblely.com/" target="_blank"
-                                       rel="noopener noreferrer">Pebblely</a></li>
-                                <li><a href="https://magicstudio.com/canvas/" target="_blank"
-                                       rel="noopener noreferrer">Canvas</a></li>
-                                <li><a href="https://app.rytr.me/create/file/65119d8596cd6156f3b67927" target="_blank"
-                                       rel="noopener noreferrer">Rytr</a></li>
-                                <li><a href="https://app.steve.ai/dashboard" target="_blank" rel="noopener noreferrer">Steve
-                                    AI</a></li>
-                            </ul>
-                        </details>
-                    </li>
-                    <li>
-                        <details>
-                            <summary>Documentations</summary>
-                            <ul className="p-2">
                                 {
-                                    data.Documentations.map(link => <li key={link.url}>
+                                    data.AllAI.map(link => <li key={link.url}>
                                         <a
+                                            className="w-48"
                                             href={link.url}
                                             target="_blank"
                                             rel="noopener noreferrer"
@@ -144,7 +234,146 @@ const Navbar = () => {
                             </ul>
                         </details>
                     </li>
-                    <li><a href="#item3">Item 3</a></li>
+                    <li>
+                        <details>
+                            <summary>Dev</summary>
+                            <ul className="p-2">
+                                {
+                                    data.Dev.map(link => <li key={link.url}>
+                                        <a
+                                            className="w-48"
+                                            href={link.url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            {link.title}
+                                        </a>
+                                    </li>)
+                                }
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Documentations</summary>
+                            <ul className="p-2">
+                                {
+                                    data.Documentations.map(link => <li key={link.url}>
+                                        <a
+                                            className="w-48"
+                                            href={link.url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            {link.title}
+                                        </a>
+                                    </li>)
+                                }
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Deploy</summary>
+                            <ul className="p-2">
+                                {
+                                    data.Deploy.map(link => <li key={link.url}>
+                                        <a
+                                            className="w-48"
+                                            href={link.url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            {link.title}
+                                        </a>
+                                    </li>)
+                                }
+                            </ul>
+                        </details>
+                    </li>
+
+                    <li>
+                        <details>
+                            <summary>CSS</summary>
+                            <ul className="p-2">
+                                {
+                                    data.CSS.map(link => <li key={link.url}>
+                                        <a
+                                            className="w-48"
+                                            href={link.url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            {link.title}
+                                        </a>
+                                    </li>)
+                                }
+                            </ul>
+                        </details>
+                    </li>
+
+                    <li>
+                        <details>
+                            <summary>Icons</summary>
+                            <ul className="p-2">
+                                {
+                                    data.Icons.map(link => <li key={link.url}>
+                                        <a
+                                            className="w-48"
+                                            href={link.url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            {link.title}
+                                        </a>
+                                    </li>)
+                                }
+                            </ul>
+                        </details>
+                    </li>
+
+                    <li>
+                        <details>
+                            <summary>APIs</summary>
+                            <ul className="p-2">
+                                {
+                                    data.APIs.map(link => <li key={link.url}>
+                                        <a
+                                            className="w-48"
+                                            href={link.url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            {link.title}
+                                        </a>
+                                    </li>)
+                                }
+                            </ul>
+                        </details>
+                    </li>
+
+                    <li>
+                        <details>
+                            <summary>Others</summary>
+                            <ul className="p-2">
+                                {
+                                    data.Others.map(link => <li key={link.url}>
+                                        <a
+                                            className="w-48"
+                                            href={link.url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                        {link.title}
+                                        </a>
+                                    </li>)
+                                }
+                            </ul>
+                        </details>
+                    </li>
+
+
+
                 </ul>
             </div>
             <div className="navbar-end">
