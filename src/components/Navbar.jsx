@@ -1,6 +1,40 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 
 const Navbar = () => {
+
+    const [data, setData] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        fetch('/links.json')
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then((data) => {
+                setData(data);
+                setLoading(false);
+            })
+            .catch((error) => {
+                setError(error);
+                setLoading(false);
+            });
+    }, []);
+
+    if (loading) {
+        return <div>Loading...</div>;
+    }
+
+    if (error) {
+        return <div>Error: {error.message}</div>;
+    }
+
+
+
+
     return (
         <nav className="navbar bg-base-100">
             <div className="navbar-start">
@@ -10,21 +44,54 @@ const Navbar = () => {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
                         </svg>
                     </button>
-                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <ul tabIndex={0}
+                        className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                         <li><a href="#item1">Item 1</a></li>
                         <li>
-                            <a>All AI</a>
-                            <ul className="p-2">
-                                <li><a href="https://sapling.ai/ai-content-detector" target="_blank" rel="noopener noreferrer">AI Content Detector</a></li>
-                                <li><a href="https://www.zerogpt.com/" target="_blank" rel="noopener noreferrer">ZeroGPT</a></li>
-                                <li><a href="https://bard.google.com/" target="_blank" rel="noopener noreferrer">Bard</a></li>
-                                <li><a href="https://chat.openai.com/" target="_blank" rel="noopener noreferrer">Chat GPT</a></li>
-                                <li><a href="https://www.bing.com/search?q=Bing+AI&showconv=1&FORM=hpcodx" target="_blank" rel="noopener noreferrer">Bing Chat</a></li>
-                                <li><a href="https://app.pebblely.com/" target="_blank" rel="noopener noreferrer">Pebblely</a></li>
-                                <li><a href="https://magicstudio.com/canvas/" target="_blank" rel="noopener noreferrer">Canvas</a></li>
-                                <li><a href="https://app.rytr.me/create/file/65119d8596cd6156f3b67927" target="_blank" rel="noopener noreferrer">Rytr</a></li>
-                                <li><a href="https://app.steve.ai/dashboard" target="_blank" rel="noopener noreferrer">Steve AI</a></li>
-                            </ul>
+                            <details>
+                                <summary>All AI</summary>
+                                <ul className="p-2">
+                                    <li><a className="w-60" href="https://sapling.ai/ai-content-detector"
+                                           target="_blank"
+                                           rel="noopener noreferrer">AI Content Detector</a></li>
+                                    <li><a href="https://www.zerogpt.com/" target="_blank"
+                                           rel="noopener noreferrer">ZeroGPT</a></li>
+                                    <li><a href="https://bard.google.com/" target="_blank"
+                                           rel="noopener noreferrer">Bard</a></li>
+                                    <li><a href="https://chat.openai.com/" target="_blank" rel="noopener noreferrer">Chat
+                                        GPT</a></li>
+                                    <li><a href="https://www.bing.com/search?q=Bing+AI&showconv=1&FORM=hpcodx"
+                                           target="_blank" rel="noopener noreferrer">Bing Chat</a></li>
+                                    <li><a href="https://app.pebblely.com/" target="_blank"
+                                           rel="noopener noreferrer">Pebblely</a></li>
+                                    <li><a href="https://magicstudio.com/canvas/" target="_blank"
+                                           rel="noopener noreferrer">Canvas</a></li>
+                                    <li><a href="https://app.rytr.me/create/file/65119d8596cd6156f3b67927"
+                                           target="_blank"
+                                           rel="noopener noreferrer">Rytr</a></li>
+                                    <li><a href="https://app.steve.ai/dashboard" target="_blank"
+                                           rel="noopener noreferrer">Steve
+                                        AI</a></li>
+                                </ul>
+                            </details>
+                        </li>
+                        <li>
+                            <details>
+                                <summary>Documentations</summary>
+                                <ul className="p-2">
+                                    {
+                                        data.Documentations.map(link => <li key={link.url}>
+                                            <a
+                                                href={link.url}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                            >
+                                                {link.title}
+                                            </a>
+                                        </li>)
+                                    }
+                                </ul>
+                            </details>
                         </li>
                         <li><a href="#item3">Item 3</a></li>
                     </ul>
@@ -38,15 +105,42 @@ const Navbar = () => {
                         <details>
                             <summary>All AI</summary>
                             <ul className="p-2">
-                                <li><a className="w-60" href="https://sapling.ai/ai-content-detector" target="_blank" rel="noopener noreferrer">AI Content Detector</a></li>
-                                <li><a href="https://www.zerogpt.com/" target="_blank" rel="noopener noreferrer">ZeroGPT</a></li>
-                                <li><a href="https://bard.google.com/" target="_blank" rel="noopener noreferrer">Bard</a></li>
-                                <li><a href="https://chat.openai.com/" target="_blank" rel="noopener noreferrer">Chat GPT</a></li>
-                                <li><a href="https://www.bing.com/search?q=Bing+AI&showconv=1&FORM=hpcodx" target="_blank" rel="noopener noreferrer">Bing Chat</a></li>
-                                <li><a href="https://app.pebblely.com/" target="_blank" rel="noopener noreferrer">Pebblely</a></li>
-                                <li><a href="https://magicstudio.com/canvas/" target="_blank" rel="noopener noreferrer">Canvas</a></li>
-                                <li><a href="https://app.rytr.me/create/file/65119d8596cd6156f3b67927" target="_blank" rel="noopener noreferrer">Rytr</a></li>
-                                <li><a href="https://app.steve.ai/dashboard" target="_blank" rel="noopener noreferrer">Steve AI</a></li>
+                                <li><a className="w-60" href="https://sapling.ai/ai-content-detector" target="_blank"
+                                       rel="noopener noreferrer">AI Content Detector</a></li>
+                                <li><a href="https://www.zerogpt.com/" target="_blank"
+                                       rel="noopener noreferrer">ZeroGPT</a></li>
+                                <li><a href="https://bard.google.com/" target="_blank"
+                                       rel="noopener noreferrer">Bard</a></li>
+                                <li><a href="https://chat.openai.com/" target="_blank" rel="noopener noreferrer">Chat
+                                    GPT</a></li>
+                                <li><a href="https://www.bing.com/search?q=Bing+AI&showconv=1&FORM=hpcodx"
+                                       target="_blank" rel="noopener noreferrer">Bing Chat</a></li>
+                                <li><a href="https://app.pebblely.com/" target="_blank"
+                                       rel="noopener noreferrer">Pebblely</a></li>
+                                <li><a href="https://magicstudio.com/canvas/" target="_blank"
+                                       rel="noopener noreferrer">Canvas</a></li>
+                                <li><a href="https://app.rytr.me/create/file/65119d8596cd6156f3b67927" target="_blank"
+                                       rel="noopener noreferrer">Rytr</a></li>
+                                <li><a href="https://app.steve.ai/dashboard" target="_blank" rel="noopener noreferrer">Steve
+                                    AI</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Documentations</summary>
+                            <ul className="p-2">
+                                {
+                                    data.Documentations.map(link => <li key={link.url}>
+                                        <a
+                                            href={link.url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            {link.title}
+                                        </a>
+                                    </li>)
+                                }
                             </ul>
                         </details>
                     </li>
