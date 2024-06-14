@@ -36,6 +36,28 @@ const Navbar = () => {
         return <div>Error: {error.message}</div>;
     }
 
+    const handleDownloadClient = () => {
+
+        const fileUrl = 'client.zip';
+        const link = document.createElement('a');
+        link.href = fileUrl;
+        link.setAttribute('download', true);
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
+
+    const handleDownloadServer = () => {
+
+        const fileUrl = 'server.zip';
+        const link = document.createElement('a');
+        link.href = fileUrl;
+        link.setAttribute('download', true);
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
+
 
 
 
@@ -381,21 +403,42 @@ const Navbar = () => {
             </div>
             <div className="navbar-end">
 
-                {
-                    location.pathname==="/" ? <Link to="/server">
-                        <button className="btn btn-secondary text-white bg-cyan-900 border-0 hover:bg-orange-400 hover:text-black">
-                            Server
-                        </button>
-                    </Link>
-                        :
-                        <Link to="/">
-                            <button className="btn btn-secondary text-white bg-cyan-900 border-0 hover:bg-orange-400 hover:text-black">
-                                Client
-                            </button>
-                        </Link>
+                    {
+                        location.pathname === "/" ? <>
+                                <div className="tooltip tooltip-bottom" data-tip="Use 7zip for Extract">
+                                    <button
+                                        onClick={handleDownloadServer}
+                                        className="btn mr-2 btn-secondary text-white bg-cyan-900 border-0 hover:bg-green-600">
+                                        Download Template Server
+                                    </button>
+                                </div>
+                                <Link to="/server">
+                                    <button
+                                        className="btn btn-secondary text-white bg-cyan-900 border-0 hover:bg-orange-400 hover:text-black">
+                                        Server
+                                    </button>
+                                </Link>
 
+                            </>
+                            :
+                            <>
+                                <div className="tooltip tooltip-bottom" data-tip="Use 7zip for Extract">
+                                    <button
+                                        onClick={handleDownloadClient}
+                                        className="btn mr-2 btn-secondary text-white bg-cyan-900 border-0 hover:bg-green-600">
+                                        Download Template Client
+                                    </button>
+                                </div>
+                                <Link to="/">
+                                    <button
+                                        className="btn btn-secondary text-white bg-cyan-900 border-0 hover:bg-orange-400 hover:text-black">
+                                        Client
+                                    </button>
+                                </Link>
 
-                }
+                            </>
+
+                    }
             </div>
         </nav>
     );
